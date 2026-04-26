@@ -29,12 +29,14 @@ LocalLink is a premium, localized service finder platform built for **Rwanda**. 
 We have provided an automated setup script to make installation easy.
 
 1. **Clone the repository**:
+
    ```bash
    git clone <your-repository-url>
    cd locallink
    ```
 
 2. **Run the Setup Script**:
+
    ```bash
    chmod +x setup.sh
    ./setup.sh
@@ -42,6 +44,7 @@ We have provided an automated setup script to make installation easy.
 
 3. **Database Configuration**:
    The script will create a `.env` file. Update the database credentials to match your local PostgreSQL setup:
+
    ```env
    DB_USER=your_username
    DB_PASSWORD=your_password
@@ -60,12 +63,15 @@ We have provided an automated setup script to make installation easy.
 ## 🏃‍♂️ Running the Project
 
 ### Start the Backend
+
 ```bash
+cd backend
 npm run dev
 # Server will run on http://localhost:5000
 ```
 
 ### Start the Frontend
+
 ```bash
 cd frontend
 npm run dev
@@ -75,6 +81,7 @@ npm run dev
 ## 🌱 Seeding Data
 
 To populate the system with Rwanda-localized professionals via the API:
+
 ```bash
 chmod +x database/seed_curl.sh
 ./database/seed_curl.sh
@@ -82,13 +89,14 @@ chmod +x database/seed_curl.sh
 
 ## 🧪 Demo Credentials
 
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Admin** | admin@locallink.rw | password123 |
+| Role         | Email                | Password    |
+| :----------- | :------------------- | :---------- |
+| **Admin**    | admin@locallink.rw   | password123 |
 | **Provider** | emmanuel@plumbing.rw | password123 |
-| **Client** | jp.kabera@client.rw | password123 |
+| **Client**   | jp.kabera@client.rw  | password123 |
 
 ---
 
 ### License
-MIT 
+
+MIT
