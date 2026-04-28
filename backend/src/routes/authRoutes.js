@@ -11,6 +11,7 @@ const registerSchema = Joi.object({
   password: Joi.string().min(6).required(),
   role: Joi.string().valid('client', 'provider', 'admin').default('client'),
   phone: Joi.string().allow('', null),
+  location: Joi.string().allow('', null),
   location_text: Joi.string().allow('', null),
   services: Joi.array().items(Joi.string()).optional()
 });
