@@ -19,12 +19,12 @@ const SearchResults = () => {
     const fetchResults = async () => {
       setLoading(true);
       try {
-        let url = `/api/search?service=${encodeURIComponent(service)}`;
+        let url = `/api/search?service=${encodeURIComponent(service)}&location=${encodeURIComponent(location)}`;
         
         // Parse lat/lng if available
         if (location && location.includes(',')) {
           const [lat, lng] = location.split(',').map(c => c.trim());
-          url += `&lat=${lat}&lng=${lng}`;
+          url += `&lat=${lat}&lng=${lng}&radius=50`;
         }
 
         const response = await fetch(url);
